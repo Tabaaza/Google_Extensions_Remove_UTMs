@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Remove UTM",
+  "version": "0.1",
+  "description": "Removing UTM from URL to have short less noise URL",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+],
+    "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    }
+}
+}
